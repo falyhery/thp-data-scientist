@@ -50,3 +50,10 @@ end
 
 puts "Le nombre de crypto contenant le mot 'coin' est: #{count}" 
 
+
+#############################
+
+#Quelles sont les devises dont le cours est inférieur à 6000 ?
+
+puts "Les devises dont le cours est inférieur à 6000 sont: "
+puts combined_hash.select {|devises,prix| prix.to_f < 6000}
