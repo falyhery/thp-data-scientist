@@ -25,3 +25,28 @@ combined_hash = Hash[devises.zip(price)]
 new_combo = combined_hash.sort_by {|devises, price| -price.to_f}
 
 puts "La crypto ayant la plus grosse valeur est: #{new_combo[0]}"
+
+
+#############################
+
+#Quels sont la ou les crypto qui ont la plus petite valeur? 
+
+reverse_combo = combined_hash.sort_by {|devises, price| price.to_f}
+
+puts "La crypto ayant la plus petite valeur est: #{reverse_combo[0]}"
+
+
+#############################
+
+#Quel est le nombre de crypto contenant le mot "coin" ? 
+
+count = 0 
+
+combined_hash.each do |devises,prix|
+	if devises.include? "coin"
+		count = count + 1
+	end
+end
+
+puts "Le nombre de crypto contenant le mot 'coin' est: #{count}" 
+
